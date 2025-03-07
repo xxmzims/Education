@@ -2,7 +2,7 @@ package ReflectionAPI;
 
 public class Person {
     int id = 0;
-    String name = "maks";
+    String name = "Dima";
     String secondName = "Kusheev";
     String orientation = "getero";
 

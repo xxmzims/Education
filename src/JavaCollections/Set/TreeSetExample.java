@@ -17,6 +17,7 @@ TreeSet хранит элементы в отсортированном поря
 4. Типы хранимых объектов: TreeSet требует, чтобы хранимые элементы реализовывали интерфейс Comparable
 или предоставляли компаратор через конструктор для обеспечения их упорядочивания. */
 
+import java.util.Comparator;
 import java.util.TreeSet;
 
 public class TreeSetExample {
@@ -52,7 +53,7 @@ public class TreeSetExample {
         }
 
         // Создание TreeSet с пользовательским компаратором для сортировки по длине строки
-        TreeSet<String> setByLength = new TreeSet<>((s1, s2) -> Integer.compare(s1.length(), s2.length()));
+        TreeSet<String> setByLength = new TreeSet<>(Comparator.comparingInt(String::length));
         setByLength.add("Peach");
         setByLength.add("Kiwi");
         setByLength.add("Watermelon");
